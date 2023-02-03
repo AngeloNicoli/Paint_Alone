@@ -1,15 +1,27 @@
 from tkinter import *
 
+# Size of Main Window
+
+
+# Size of Canvas
 canvas_width = 700
 canvas_height = 600
+pixel_size = 20
+n_pixel_x = canvas_width/pixel_size
+n_pixel_y = canvas_height/pixel_size
+
+#print(int(n_pixel_x))
+#print(int(n_pixel_y))
+
 width_brush =1
+brush_Mode = 0
 
 color = "Black"
 x1=0
 y1=0
 
 master = Tk()
-master.title( "Painting")
+master.title( "PaintAlone")
 master.configure(bg="#dddddd")
 
 def Menu_Help():
@@ -98,15 +110,40 @@ def paint( event ):
    global x1
    global y1
    global width_brush
+   global brush_Mode
+   global pixel_size
    python_green = "#476042"
    #x1, y1 = ( event.x - 1 ), ( event.y - 1 )
    #x2, y2 = ( event.x + 1 ), ( event.y + 1 )
    #w.create_oval( x1, y1, x2, y2, fill = python_green )
-   w.create_line( x1, y1, event.x, event.y, width = width_brush, fill = color)
+   if brush_Mode ==0:
+      w.create_line( x1, y1, event.x, event.y, width = width_brush, fill = color)
+   if brush_Mode ==1:
+      cordx = (event.x//pixel_size) * pixel_size
+      cordy = (event.y//pixel_size) * pixel_size
+      print(cordx)
+      print(cordy)
+
+      w.create_rectangle(cordx, cordy, cordx + pixel_size, cordy + pixel_size, width = 0, fill = color, tags="pixel")
    x1= event.x
    # y1= event.x PROVA PER FARE EFFETTI
    y1 = event.y
 
+
+#def Mouse_position(event):
+#   print(event.x,event.y)
+
+def Pixel_Mode():
+   global brush_Mode
+   print("Pixel_Mode: ON")
+   brush_Mode = 1
+   return
+
+def Brush_Mode():
+   global brush_Mode
+   print("Brush_Mode: ON")
+   brush_Mode = 0
+   return
 
 
 w = Canvas(master, width=canvas_width, height=canvas_height, bg="white")
@@ -114,7 +151,7 @@ w.grid(row=1, column=3, rowspan=6)
 #w.bind( "<Button-1>", paint )
 w.bind("<ButtonRelease-1>", paint)
 w.bind("<B1-Motion>", paint)
-
+#w.bind("<B1-Motion>", Mouse_position)
 
 
 Menu_01 = Button(text="Help", command = Menu_Help)
@@ -171,8 +208,14 @@ Butn13.grid(row=8, column=0, columnspan=2 , padx=10,sticky=W+E)
 horizontal  = Scale(master,from_=1, to=10, orient=HORIZONTAL, command=slide)
 horizontal.grid(row=9,column=0, columnspan=2 , padx=10, sticky=W+E)
 
-horizontal2  = Button(text = "Delete Canvas", command= Del_Canvas)
-horizontal2.grid(row=9,column=3)
+Del_Button = Button(text = "Delete Canvas", command= Del_Canvas)
+Del_Button.grid(row=9,column=3)
+
+Pixel_Button  = Button(text = "Pixel Mode", command= Pixel_Mode)
+Pixel_Button.grid(row=2,column=4,padx=10)
+
+Brush_Button  = Button(text = "Brush Mode", command= Brush_Mode)
+Brush_Button.grid(row=1,column=4,padx=10)
 
 
 Butn.bind("<Button-1>", Change_color)
@@ -191,9 +234,6 @@ Butn11.bind("<Button-1>",Change_color11)
 Butn12.bind("<Button-1>",Change_color12)
 
 master.bind("<c>",Change_color40)
-
-
-
 
 print(Butn2.cget("bg"))
 
