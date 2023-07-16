@@ -1,0 +1,16 @@
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,Purple,Purple,Purple,Purple,Purple,0,Purple,Purple,Purple,Purple,Purple,Purple,0,0,0,0,0,0
+0,0,0,0,0,Blue,Purple,Purple,Purple,Purple,Purple,Blue,Blue,Blue,Blue,Blue,Purple,Purple,Purple,0,0,0,0,0
+0,0,0,0,Blue,Blue,0,Purple,Purple,Purple,Purple,0,0,Purple,0,0,0,0,Purple,0,0,0,0,0
+0,0,0,0,Blue,0,Purple,0,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,Purple,0,Purple,0,0,0,0,0
+0,0,0,0,Blue,0,Purple,0,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,Purple,0,Purple,Purple,0,0,0,0
+0,0,0,0,Blue,Blue,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,0,Purple,0,0,0,0
+0,0,0,Purple,Purple,Purple,0,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,Purple,0,0,0,0
+0,0,0,0,Purple,Blue,0,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,0,0,0
+0,0,0,0,Purple,0,0,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,Purple,Purple,0,0,0
+0,0,0,0,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,0,Purple,Purple,0
+Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,Purple,Purple,Purple,Purple,Purple,Purple,0,0,Purple,0
+Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,Purple,0,0,0,Purple,0,Purple,0
+Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,Purple,Purple,0,Purple,0,0
+Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,0,0,0
+Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,Purple,0,0,0
