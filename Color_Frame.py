@@ -1,5 +1,9 @@
 from tkinter import *
-from Settings import *
+#from Settings import *
+from HubSendReceive import *
+
+a = send_back()
+print(a)
 
 Color_Palette = [None] * 11
 Color_Palette[0] =["MediumVioletRed","DeepPink","PaleVioletRed","HotPink","LightPink","Pink"]
@@ -19,20 +23,18 @@ Color_Palette[8] = ["MistyRose","AntiqueWhite","Linen","Beige","WhiteSmoke","Lav
 Color_Palette[9] = ["Teal","DarkCyan","LightSeaGreen","CadetBlue","DarkTurquoise","MediumTurquoise","Turquoise","Aqua","Cyan","Aquamarine","PaleTurquoise", "LightCyan"]
 Color_Palette[10] = ["Black","DarkSlateGray","DimGray","SlateGray","Gray","LightSlateGray","DarkGray","Silver", "LightGray","Gainsboro"]
 
-
 #print(Color_Palette)
 #print(len(Color_Palette))
 #print(len(Color_Palette[0]))
 #print(len(Color_Palette[1]))
 
 def Close_color():
-    global color_selected
-    color_selected[0] = ["Yellow"]
+    #global color_selected
+    #color_selected[0] = ["Yellow"]
     #print(type(color_selected))
     #print(color_selected[0])
     print("eri")
-
-
+    #Receive_Color("ed")
 
 # Create first time 
 top = Toplevel()
@@ -48,7 +50,6 @@ for i in range(len(Color_Palette)):
         Butn299.grid(row=15, column=12,sticky=W+E, padx=5, ipadx=10)    
 top.withdraw()
 
-
 def Color_Selection(colors,master):
     global color_selected
     global top 
@@ -60,19 +61,18 @@ def Color_Selection(colors,master):
     for i in range(len(Color_Palette)):
         for j in range(len(Color_Palette[i])):
            #print(Color_Palette[i][j])
-            Butn20 = Label(top,text="", bg= Color_Palette[i][j], borderwidth=0.5,relief="solid")
+            Butn20 = Label(top,text=str(Color_Palette[i][j]), bg= Color_Palette[i][j], borderwidth=0.5,relief="solid")
             Butn20.grid(row=j, column=i,sticky=W+E, padx=5, ipadx=10)
             Butn299 = Button(top,text="dddwwwwwwwd", borderwidth=0.5,relief="solid", command=Close_color)
-            Butn299.grid(row=15, column=12,sticky=W+E, padx=5, ipadx=10)    
+            Butn299.grid(row=15, column=12,sticky=W+E, padx=5, ipadx=10)           
     #print(color_selected)
     color_selected[0]  = "Blue"
     #print(color_selected)
     top.deiconify()
     
 def Color_Choose():
-    #print(34)
+    #print(334)
     pass
-
 
 top.bind("<B1-Motion>", Color_Choose)
 
